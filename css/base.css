@@ -111,13 +111,13 @@ header {
   margin: 0 auto 10px;
   box-shadow: 0 3px 2px 0 rgba(200, 200, 200, 0.1);
 }
-header #headerInner {
+header .headerInner {
   max-width: 1020px;
   width: 100%;
   margin: 0 auto;
   position: relative;
 }
-header #headerInner:after {
+header .headerInner:after {
   content: ".";
   display: block;
   clear: both;
@@ -125,10 +125,10 @@ header #headerInner:after {
   visibility: hidden;
   font-size: 0.1em;
 }
-* html header #headerInner {
+* html header .headerInner {
   height: 1%;
 }
-header #headerInner h1 {
+header .headerInner h1 {
   float: left;
   margin: 0;
   padding: 20px 0;
@@ -137,27 +137,27 @@ header #headerInner h1 {
   font-size: 28px;
   font-size: 2.8rem;
 }
-header #headerInner h1 a {
+header .headerInner h1 a {
   color: #3B7BEA;
   text-decoration: none;
 }
-header #headerInner h1 img {
+header .headerInner h1 img {
   vertical-align: middle;
   margin-right: 5px;
 }
 
-#nav {
+.nav {
   background: #fff;
   border-top: #ddd 1px solid;
   border-bottom: #ddd 1px solid;
 }
-#nav #navInner {
+.nav .navInner {
   max-width: 1020px;
   width: 100%;
   margin: 0 auto;
   position: relative;
 }
-#nav #navInner:after {
+.nav .navInner:after {
   content: ".";
   display: block;
   clear: both;
@@ -165,17 +165,17 @@ header #headerInner h1 img {
   visibility: hidden;
   font-size: 0.1em;
 }
-* html #nav #navInner {
+* html .nav .navInner {
   height: 1%;
 }
-#nav #navInner #sp-menu, #nav #navInner #sp-search {
+.nav .navInner .sp-menu, .nav .navInner .sp-search {
   display: none;
 }
-#nav #navInner #navMenu {
+.nav .navInner .navMenu {
   width: 100%;
   padding: 0;
 }
-#nav #navInner #navMenu:after {
+.nav .navInner .navMenu:after {
   content: ".";
   display: block;
   clear: both;
@@ -183,25 +183,25 @@ header #headerInner h1 img {
   visibility: hidden;
   font-size: 0.1em;
 }
-* html #nav #navInner #navMenu {
+* html .nav .navInner .navMenu {
   height: 1%;
 }
-#nav #navInner #navMenu .gnav {
+.nav .navInner .navMenu .gnav {
   display: table;
   width: 100%;
 }
-#nav #navInner #navMenu .gnav li {
+.nav .navInner .navMenu .gnav li {
   display: table-cell;
   border-right: #ddd 1px solid;
 }
-#nav #navInner #navMenu .gnav li a {
+.nav .navInner .navMenu .gnav li a {
   display: block;
   text-align: center;
   text-decoration: none;
   padding: 20px 0;
   color: #1763E1;
 }
-#nav #navInner #navMenu .gnav li:first-child {
+.nav .navInner .navMenu .gnav li:first-child {
   border-left: #ddd 1px solid;
 }
 
@@ -216,5 +216,13 @@ header #headerInner h1 img {
   padding: 10px 0 0 0;
 }
 
+/* ----------------------------------------------------------
+  フッター
+---------------------------------------------------------- */
 
+.footerinner {
+  max-width: 1020px;
+  width: 100%;
+  margin: 0 auto;
+}
 
