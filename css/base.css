@@ -1,228 +1,103 @@
 @charset "utf-8";
-/* ----------------------------------------------------------
-	リセット
----------------------------------------------------------- */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 100%;
-  vertical-align: baseline;
-}
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-html {
-  overflow-y: scroll;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: '';
-  content: none;
-}
-
-input, textarea {
-  margin: 0;
-  padding: 0;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th {
-  text-align: left;
-}
-
-a:focus {
-  outline: none;
-}
-
-img, textarea {
-  vertical-align: bottom;
-}
+/* --------------------------------
+ * base
+ * -------------------------------- */
 
 html {
   font-size: 62.5%;
 }
-
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
+body {
+  color: #333;
+  font-size: 1.2rem;
+  font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+}
+*, *::before, *::after {
   box-sizing: border-box;
 }
-
-a, a img {
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-a img:hover {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
-}
-
-/* ----------------------------------------------------------
-	共通	
----------------------------------------------------------- */
-body {
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  background: #F5F5F5;
-  font-size: 14px;
-  font-size: 1.4rem;
-  color: #000;
-}
-
-a {
-  color: #000000;
-  text-decoration: underline;
-}
-a:hover {
+a:link, a:visited, a:hover, a:active {
+  color: #d03c56;
   text-decoration: none;
 }
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ----------------------------------------------------------
-	ヘッダー	
----------------------------------------------------------- */
-header {
-  margin: 0 auto 10px;
-  box-shadow: 0 3px 2px 0 rgba(200, 200, 200, 0.1);
-}
-header .headerInner {
-  max-width: 1020px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-header .headerInner:after {
-  content: ".";
+.clearfix::after {
+  content: '';
   display: block;
   clear: both;
-  height: 0;
-  visibility: hidden;
-  font-size: 0.1em;
 }
-* html header .headerInner {
-  height: 1%;
+
+/* --------------------------------
+ * layout
+ * -------------------------------- */
+
+.header {
+  width: 100%;
 }
-header .headerInner h1 {
+
+.main {
+  display: block;
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+}
+
+.innerContent {
+  max-width: 1020px;
+  margin: 0 auto 20px;
+  padding: 20px 10px;
+}
+
+.about,
+.works,
+.skills,
+.contact {
+  margin-bottom: 20px;
+}
+
+/* 表示確認用の記述（後で削除する） */
+.innerContent {
+  border: 1px solid #aaa;
+  background-color: #ccc;
+}
+
+/* --------------------------------
+ * header
+ * -------------------------------- */
+
+.logo {
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 3rem;
   float: left;
-  margin: 0;
-  padding: 20px 0;
-  width: 50%;
-  font-weight: normal;
-  font-size: 28px;
-  font-size: 2.8rem;
-}
-header .headerInner h1 a {
-  color: #3B7BEA;
-  text-decoration: none;
-}
-header .headerInner h1 img {
-  vertical-align: middle;
-  margin-right: 5px;
 }
 
 .nav {
-  background: #fff;
-  border-top: #ddd 1px solid;
-  border-bottom: #ddd 1px solid;
+  width: 70%;
+  float: right;
 }
-.nav .navInner {
-  max-width: 1020px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-.nav .navInner:after {
-  content: ".";
-  display: block;
-  clear: both;
-  height: 0;
-  visibility: hidden;
-  font-size: 0.1em;
-}
-* html .nav .navInner {
-  height: 1%;
-}
-.nav .navInner .sp-menu, .nav .navInner .sp-search {
+
+.sp-menu {
   display: none;
 }
-.nav .navInner .navMenu {
+
+.navInner .gnav {
+  float: right;
+  width: 70%;
+}
+
+.navInner .gnav .navItem {
+  width: 20%;
+  font-weight: bold;
+  display: inline-block;
+  padding-right: 5px;
+}
+.navInner .gnav .navItem a {
   width: 100%;
-  padding: 0;
-}
-.nav .navInner .navMenu:after {
-  content: ".";
-  display: block;
-  clear: both;
-  height: 0;
-  visibility: hidden;
-  font-size: 0.1em;
-}
-* html .nav .navInner .navMenu {
-  height: 1%;
-}
-.nav .navInner .navMenu .gnav {
-  display: table;
-  width: 100%;
-}
-.nav .navInner .navMenu .gnav li {
-  display: table-cell;
-  border-right: #ddd 1px solid;
-}
-.nav .navInner .navMenu .gnav li a {
-  display: block;
+  font-size: 1.5rem;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
-  text-decoration: none;
-  padding: 20px 0;
-  color: #1763E1;
+  display: block;
 }
-.nav .navInner .navMenu .gnav li:first-child {
-  border-left: #ddd 1px solid;
-}
-
-/* ----------------------------------------------------------
-	コンテンツ	
----------------------------------------------------------- */
-
-.contents {
-  max-width: 1020px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 10px 0 0 0;
-}
-
-/* ----------------------------------------------------------
-  フッター
----------------------------------------------------------- */
-
-.footerinner {
-  max-width: 1020px;
-  width: 100%;
-  margin: 0 auto;
-}
-
