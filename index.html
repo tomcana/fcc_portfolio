@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="css/sp.css" media="screen and (max-width: 568px)">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
+<script src="https://use.fontawesome.com/c0151c565a.js"></script>
 </head>
 
 <body>
@@ -39,69 +40,77 @@
 	</div>
 </header>
 <main class="main innerContent">
-	<section class="about" id="about">
-		<h2 class="ttl">ABOUT</h2>
-		<div class="aboutinfo">Front-End Developer - User Experience Designer - Graphic Artist</div>
-		<div><img src="images/profile_img.jpg" alt="Tomomi Shiba"></div>
+	<section class="about clearfix" id="about">
+		<div class="about-info">
+			<h2 class="ttl">Tomomi Shiba</h2>
+			<p class="aboutinfo">Front-End Developer - User Experience Designer - Graphic Artist</p>
+		</div>
+		<div class="image"><img class="profile-img" src="images/profile_img.jpg" alt="Tomomi Shiba"></div>
 	</section>
 	<section class="works" id="works">
 		<h2 class="ttl">WORKS</h2>
-		<section class="worksItem">
-			<div>
-				<h3><a href="">I didin't know</a></h3>
-				<div class="worksinfo">This is blog about my coding jorney.  Basically I wrote what I learnt by participating #100 days of code.  I also work on customization of the word press page.</div>
+		<section class="worksItem clearfix">
+			<div class="worksinfo">
+				<h3 class="ttl"><a href="">I didin't know</a></h3>
+				<div>This is blog about my coding jorney.  Basically I wrote what I learnt by participating #100 days of code.  I also work on customization of the word press page.</div>
 			</div>
-			<div><img src="images/blog.jpg" alt="I didn't know"></div>
+			<div class="worksimg"><img src="images/blog.jpg" alt="I didn't know"></div>
 		</section>
-		<section class="worksItem">
-			<div>
-				<h3><a href="">tribute page</a></h3>
+		<section class="worksItem clearfix">
+			<div class="worksinfo">
+				<h3 class="ttl"><a href="">tribute page</a></h3>
 				<div class="worksinfo">This page is made for FreeCodeCamp's project.</div>
 			</div>
-			<div><img src="images/tributepage.jpg" alt="Tomomi Shiba"></div>
+			<div class="worksimg"><img src="images/tributepage.jpg" alt="Tomomi Shiba"></div>
 		</section>
-		<section class="worksItem">
-			<div>
-				<h3><a href="">Online Resume</a></h3>
+		<section class="worksItem clearfix">
+			<div class="worksinfo">
+				<h3 class="ttl"><a href="">Online Resume</a></h3>
 				<div class="worksinfo">This page is made for Udacity's Front End Nanodegree project.  I learnt jQuery and Javascript through this project.</div>
 			</div>
-			<div><img src="images/onlineresume.jpg" alt="Tomomi Shiba"></div>
+			<div class="worksimg"><img src="images/onlineresume.jpg" alt="Tomomi Shiba"></div>
 		</section>
-		<section class="worksItem">
-			<div>
-				<h3><a href="">Styling spritz</a></h3>
+		<section class="worksItem clearfix">
+			<div class="worksinfo">
+				<h3 class="ttl"><a href="">Styling spritz</a></h3>
 				<div class="worksinfo">landing page</div>
 			</div>
-			<div><img src="images/stylingspirits.jpg" alt="Tomomi Shiba"></div>
+			<div class="worksimg"><img src="images/stylingspirits.jpg" alt="Tomomi Shiba"></div>
 		</section>
 	</section>
 	<section class="skills" id="skills">
 		<h2 class="ttl">SKILLS</h2>
-		<section class="skillsItem">
-			<figure><img src="images/blog.jpg" alt="I didn't know"></figure>
-			<div class="skillInfo">
-				<h3>HTML5</h3>
-				<div class="skillText">This is blog about my coding jorney.  Basically I wrote what I learnt by participating #100 days of code.  I also work on customization of the word press page.</div>
-			</div>
-		</section>
-		<section class="skillsItem">
-			<figure><img src="images/blog.jpg" alt="I didn't know"></figure>
-			<div class="skillInfo">
-				<h3>HTML5</h3>
-				<div class="skillText">This is blog about my coding jorney.  Basically I wrote what I learnt by participating #100 days of code.  I also work on customization of the word press page.</div>
-			</div>
-		</section>
-		<section class="skillsItem">
-			<figure><img src="images/blog.jpg" alt="I didn't know"></figure>
-			<div class="skillInfo">
-				<h3>HTML5</h3>
-				<div class="skillText">This is blog about my coding jorney.  Basically I wrote what I learnt by participating #100 days of code.  I also work on customization of the word press page.</div>
-			</div>
-		</section>
+		<div class="skillsItemContainer clearfix">
+			<section class="skillsItem">
+				<i class="skillsicon fa fa-html5" aria-hidden="true"></i>
+				<div class="skillInfo">
+					<h3 class="ttl">HTML5</h3>
+					<div class="skillText">I understand HTML5</div>
+				</div>
+			</section>
+			<section class="skillsItem">
+				<i class="skillsicon fa fa-css3" aria-hidden="true"></i>
+				<div class="skillInfo">
+					<h3 class="ttl">CSS3</h3>
+					<div class="skillText">I understand CSS3</div>
+				</div>
+			</section>
+			<section class="skillsItem">
+				<i class="skillsicon fa fa-code" aria-hidden="true"></i>
+				<div class="skillInfo">
+					<h3 class="ttl">jQuery</h3>
+					<div class="skillText">I can read jQuery and I'm working on writing jQuery.</div>
+				</div>
+			</section>
+		</div>
 	</section>
 	<section class="contact" id="contact">
 		<h2 class="ttl">CONTACT</h2>
-
+		<div class="contactItem">
+			<a href=""><i class="contacticon fa fa-twitter" aria-hidden="true"></i></a>
+			<a href=""><i class="contacticon fa fa-github" aria-hidden="true"></i></a>
+			<a href=""><i class="contacticon fa fa-envelope" aria-hidden="true"></i></a>
+		</div>
 	</section>
 </main>
 <footer class="footer">

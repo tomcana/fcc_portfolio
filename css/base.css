@@ -45,7 +45,7 @@ a:link, a:visited, a:hover, a:active {
 .innerContent {
   max-width: 1020px;
   margin: 0 auto 20px;
-  padding: 20px 10px;
+  padding: 20px 30px;
 }
 
 .about,
@@ -58,7 +58,7 @@ a:link, a:visited, a:hover, a:active {
 /* 表示確認用の記述（後で削除する） */
 .innerContent {
   border: 1px solid #aaa;
-  background-color: #ccc;
+  /*background-color: #ccc;*/
 }
 
 /* --------------------------------
@@ -100,4 +100,91 @@ a:link, a:visited, a:hover, a:active {
   line-height: 30px;
   text-align: center;
   display: block;
+}
+
+/* --------------------------------
+ * about
+ * -------------------------------- */
+.about {
+  width: 680px;
+  margin: 0 auto 30px;
+}
+.about .about-info {
+  width: 480px;
+  float: left;
+}
+.about .about-info .ttl {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  padding-top: 80px;
+}
+.about .image {
+  width: 180px;
+  float: left;
+}
+.about .image .profile-img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+/* --------------------------------
+ * works
+ * -------------------------------- */
+ .works .ttl {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+ }
+ .worksItem {
+  margin-bottom: 10px;
+ }
+ .worksinfo {
+  width: 50%;
+  float: left;
+ }
+  .worksimg {
+  width: 50%;
+    float: right;
+ }
+.worksinfo .ttl {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+/* --------------------------------
+ * skills
+ * -------------------------------- */
+  .skills .ttl {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+ }
+ .skillsItem {
+  width: 30%;
+  float: left;
+  text-align: center;
+ }
+.skillsItem .skillsicon {
+  font-size: 100px;
+  margin-bottom: 10px;
+}
+.skillInfo .ttl {
+  font-size: 2rem;
+}
+
+
+/* --------------------------------
+ * contact
+ * -------------------------------- */
+ .contact .ttl {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+ }
+.contactItem {
+  text-align: center;
+}
+.contact .contacticon {
+  font-size: 50px;
+  margin-right: 30px;
 }
