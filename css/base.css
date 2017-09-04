@@ -109,8 +109,8 @@ a:link, a:visited, a:hover, a:active {
   display: block;
   padding: 5px 5px 5px 0;
 }
-.navInner .gnav .navItem a.current {
-  /*background: #fff;*/
+.navInner .gnav .navItem a.current,
+.navInner .gnav .navItem a:hover {
   background: #A82B27;
   color: #fff;
   border-radius: 5px;
@@ -134,7 +134,7 @@ a:link, a:visited, a:hover, a:active {
 .about .about-info .ttl {
   font-size: 3rem;
   margin-bottom: 0.5rem;
-  padding-top: 80px;
+  padding-top: 38px;
 }
 .about .image {
   width: 180px;
@@ -244,4 +244,41 @@ a:link, a:visited, a:hover, a:active {
 
 .footer .footerinner {
   margin-bottom: 0; 
+}
+
+#goto-pagetop{
+position: fixed;/*ブラウザ基準から*/
+bottom: 5px;
+right: 5px;
+z-index: 10000;/*z-indexで正面に配置できるように*/
+}
+
+#goto-pagetop a{
+  display: block;
+  overflow: hidden;/*テキストの影響を受けないようにする。*/
+  text-indent: -999em;/*テキストを場外に飛ばす*/
+  text-decoration: none;
+  position: relative;
+  margin: 2rem auto;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px 0px #aaa;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#goto-pagetop a:before{
+content: "↑";
+color: #999;
+display: block;
+position: absolute;
+text-indent: 0;
+width: 64px;
+height: 64px;
+top: 0;
+left: 0;
 }

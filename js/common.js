@@ -48,6 +48,28 @@ $(function() {
    })
 });
 
+//Page TOP
+//このページのはじめに戻る
+$(function() {
+//id="goto-pagetop"の要素が「このページのはじめに戻る」ボタン
+
+//はじめは非表示
+$('#goto-pagetop').hide();
+//スクロールで段々表示・非表示
+$(window).scroll(function () {
+if ($(this).scrollTop() > 200) {
+$('#goto-pagetop').fadeIn();
+} else {
+$('#goto-pagetop').fadeOut();
+}
+});
+//クリックでページの一番上へ行く
+$('#goto-pagetop').click(function () {
+$('body, html').animate({ scrollTop: 0 }, 500);
+return false;
+});
+});
+
 //NAVI SP
 $(function() {
 	$('#sp-menu').click(function(){
