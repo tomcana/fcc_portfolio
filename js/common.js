@@ -72,9 +72,9 @@ return false;
 
 //NAVI SP
 $(function() {
-	$('#sp-menu').click(function(){
+	$('.sp-menu').click(function(){
 		$(".menu-icon").toggleClass('active');
-		$("#navMenu ul").slideToggle(800);
+		$(".navMenu ul").slideToggle(800);
 	});
 });
 

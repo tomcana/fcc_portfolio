@@ -138,10 +138,10 @@ a:link, a:visited, a:hover, a:active {
 }
 .about .image {
   width: 180px;
-  float: left;
+  float: right;
 }
 .about .image .profile-img {
-  width: 150px;
+  width: 100%;
   border-radius: 50%;
 }
 
